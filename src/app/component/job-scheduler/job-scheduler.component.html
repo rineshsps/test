@@ -1,0 +1,121 @@
+<div class="container-fluid">
+  <div class="mat-elevation-z2 mt-3 mb-3 white-background">
+    <div class="rowContent p-3">
+      <span class="mat-h2 mb-0">Create Job</span>
+      <span class="spacer"></span>
+      <span>
+        <button mat-stroked-button color="primary" (click)="backTolistPage()">
+          <mat-icon aria-label="back icon">navigate_before</mat-icon>
+          Back to Job List
+        </button>
+      </span>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="col-md-12 mt-3">
+      <div class="row">
+        <div class="col-sm-4 col-md-2">
+          <mat-form-field class="full-width" color="accent">
+            <input matInput placeholder="Job Name">
+          </mat-form-field>
+        </div>
+        <div class="col-sm-4 col-md-2">
+          <mat-form-field class="full-width" color="accent">
+            <mat-label>Template</mat-label>
+            <mat-select>
+              <mat-option value="incident form">
+                Incident Record
+              </mat-option>
+              <mat-option value="contact form">
+                Contact Form
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-sm-4 col-md-2">
+          <mat-form-field class="full-width" color="accent">
+            <mat-label>Frequency</mat-label>
+            <mat-select>
+              <mat-option value="once">
+                Once
+              </mat-option>
+              <mat-option value="daily">
+                Daily
+              </mat-option>
+              <mat-option value="weekly">
+                weekly
+              </mat-option>
+              <mat-option value="monthly">
+                Monthly
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <!-- <div class="col-sm-4 col-md-2">
+          <mat-form-field class="full-width" color="accent">
+            <input matInput placeholder="Favorite food" value="Sushi">
+          </mat-form-field>
+        </div> -->
+        <div class="col-sm-4 col-md-2">
+          <mat-form-field class="full-width" color="accent">
+            <button mat-icon-button matSuffix  (click)="toggleTimepicker.open()">
+              <mat-icon color="accent" class="scheduleIcon">schedule</mat-icon>
+            </button>
+            <input matInput [ngxTimepicker]="toggleTimepicker" [disableClick]="true" readonly placeholder="Start Time">
+            <ngx-material-timepicker #toggleTimepicker></ngx-material-timepicker>
+          </mat-form-field>
+        </div>
+        <div class="col-sm-4 col-md-2 mb-3">
+          <label id="data_export_format" class="labelProperty">Data Export Format</label>
+          <mat-radio-group aria-label="Select an option" class="radioButtonGroup" value='1'>
+            <mat-radio-button value="1" class="radioBtnProperty">CSV</mat-radio-button>
+            <mat-radio-button value="2" class="radioBtnProperty">JSON</mat-radio-button>
+          </mat-radio-group>
+        </div>
+    </div>
+  </div>
+  <div class="tableWrapper">
+  <table mat-table [dataSource]="dataSource">
+      
+    <!-- DataFiled Column -->
+    <ng-container matColumnDef="datafield">
+      <th mat-header-cell *matHeaderCellDef> Data Field </th>
+      <td mat-cell *matCellDef="let element"> {{element.DataFiled}} </td>
+    </ng-container>
+    
+    <!-- Checkbox Column -->
+    <ng-container matColumnDef="select">
+      <th mat-header-cell *matHeaderCellDef>
+        <mat-checkbox (change)="$event ? masterToggle() : null"
+                      [checked]="selection.hasValue() && isAllSelected()"
+                      [indeterminate]="selection.hasValue() && !isAllSelected()"
+                      [aria-label]="checkboxLabel()">
+        </mat-checkbox>
+      </th>
+      <td mat-cell *matCellDef="let row">
+        <mat-checkbox (click)="$event.stopPropagation()"
+                      (change)="$event ? selection.toggle(row) : null"
+                      [checked]="selection.isSelected(row)"
+                      [aria-label]="checkboxLabel(row)">
+        </mat-checkbox>
+      </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true" class="headerRowHeight"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="bodyRowHeight"
+        (click)="selection.toggle(row)">
+    </tr>
+  </table>
+  </div>
+  <mat-divider></mat-divider>
+  <div class="rowContent p-3">
+    <span class="spacer"></span>
+    <span>
+      <button mat-stroked-button color="accent" (click)="save()">
+        save
+      </button>
+      <button mat-raised-button color="accent" class="ml-3" (click)="save()">
+        save and schedule
+      </button>
+    </span>
+  </div>
+</div>
+</div>

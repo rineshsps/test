@@ -1,0 +1,44 @@
+.full-width {
+    width: 100%;
+}
+
+.labelProperty{
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.54);
+}
+
+.radioButtonGroup{
+    display: flex;
+    flex-direction: row;
+    margin-top: 8px;
+    font-size: 13px;
+}
+.radioBtnProperty{
+    margin-right: 10px;
+}
+
+.mat-icon-button .mat-icon.scheduleIcon{
+    font-size: 130%;
+    height: 1rem;
+    line-height: 1rem;
+}
+.tableWrapper{
+    max-height: 58vh;
+    overflow: auto;
+}
+
+.headerRowHeight{
+    height: 42px;
+}
+
+.bodyRowHeight{
+    height: 39px;
+}
+
+/* .radioButtonGroup ::ng-deep .mat-radio-container, .radioButtonGroup ::ng-deep .mat-radio-outer-circle, .radioButtonGroup ::ng-deep .mat-radio-inner-circle{
+    height: 15px;
+    width: 15px;
+}
+.radioButtonGroup ::ng-deep .mat-radio-outer-circle {
+    border-width:1.5px ;
+} */

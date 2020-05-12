@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+table {
+    width: 100%;
+}
+
+th.mat-header-cell{
+    background-color: #fff3e0;
+    color: #000000;
+}
+  
+.rowContent{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.spacer{
+    flex: 1 1 auto;
+}
+
+.align-center{
+    text-align: center !important;
+}
+.contentCenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.white-background{
+    background-color: #ffffff !important;
+}

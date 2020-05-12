@@ -1,0 +1,8 @@
+.green_icon{
+  color: #429d57;
+}
+
+.tableWrapper{
+  max-height: 70.7vh;
+  overflow: auto;
+}

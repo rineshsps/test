@@ -1,0 +1,74 @@
+{
+  "joblist": [
+    {
+      "id": 2,
+      "name": "JOB22",
+      "frequencyType": 1,
+      "nextExecutionDate": "2020-04-01T10:10:10",
+      "query": null,
+      "selectedFields": null,
+      "templateId": 1,
+      "userName": "user1",
+      "startTime": "10:10 AM",
+      "frequencyValue": "\"[\"Monday\",\"Tuesday\"]\"",
+      "exportFormatType": 1,
+      "published": true
+    },
+    {
+      "id": 3,
+      "name": "job33",
+      "frequencyType": 1,
+      "nextExecutionDate": "2020-01-01T10:10:10",
+      "query": null,
+      "selectedFields": null,
+      "templateId": 1,
+      "userName": "user2",
+      "startTime": "1:10 AM",
+      "frequencyValue": "28",
+      "exportFormatType": 1,
+      "published": true
+    },
+    {
+      "id": 4,
+      "name": "JOB 444",
+      "frequencyType": 1,
+      "nextExecutionDate": "2020-01-01T10:10:10",
+      "query": null,
+      "selectedFields": null,
+      "templateId": 1,
+      "userName": "user2",
+      "startTime": "1:10 PM",
+      "frequencyValue": "20",
+      "exportFormatType": 2,
+      "published": true
+    },
+    {
+      "id": 5,
+      "name": "JBO5",
+      "frequencyType": 1,
+      "nextExecutionDate": "2020-01-01T10:10:10",
+      "query": null,
+      "selectedFields": null,
+      "templateId": 1,
+      "userName": "user2",
+      "startTime": "",
+      "frequencyValue": null,
+      "exportFormatType": 2,
+      "published": false
+    },
+    {
+      "id": 6,
+      "name": "JOB 6",
+      "frequencyType": 1,
+      "nextExecutionDate": "2020-01-01T10:10:10",
+      "query": null,
+      "selectedFields": null,
+      "templateId": 1,
+      "userName": "user4",
+      "startTime": null,
+      "frequencyValue": "\"[\"Friday\",\"Tuesday\"]\"",
+      "exportFormatType": 2,
+      "published": true
+    }
+  ]
+}

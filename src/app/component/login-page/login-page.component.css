@@ -1,0 +1,25 @@
+.formWidth {
+    max-width: 400px;
+}
+
+.full-width {
+    width: 100%;
+    min-width: 150px;
+    max-width: 320px;
+}
+
+.loginContentHeight{
+height: 100%;
+background-color: antiquewhite;
+}
+
+.footerLogo{
+    max-width: 25%;
+}
+
+.loginContent{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
